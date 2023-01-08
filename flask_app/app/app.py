@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def app_root():
-    return "Welcome to the flask API with elasticsearch backend. Try /health endpoint"
+    return "Welcome to the flask API"
 
 
 @app.route("/elastic/<user_id>", methods=["POST"])
