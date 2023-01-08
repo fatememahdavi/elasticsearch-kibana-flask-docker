@@ -12,7 +12,7 @@ Python | Flask | Elasticsearch | Kibana | Docker
  docker-compose up
 ```
 ## kibana interface
- - go to `http://localhost:5061`:
+ - go to `http://localhost:5601`:
 
 <img src="./doc/kibana_interface.png" width="100%"/>
 
