@@ -9,7 +9,7 @@ Python | Flask | Elasticsearch | Kibana | Docker
 ```
  - build and run your app:
 ```
- docker compose up
+ docker-compose up
 ```
 ## kibana interface
  - go to `http://{DOCKER_MACHINE_IP}:5061`:
