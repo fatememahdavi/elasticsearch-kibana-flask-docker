@@ -12,7 +12,7 @@ Python | Flask | Elasticsearch | Kibana | Docker
  docker-compose up
 ```
 ## kibana interface
- - go to `http://{DOCKER_MACHINE_IP}:5061`:
+ - go to `http://localhost:5061`:
 
 <img src="./doc/kibana_interface.png" width="100%"/>
 
@@ -20,12 +20,12 @@ Python | Flask | Elasticsearch | Kibana | Docker
 ## APIs
 - elasticsearch info and healthy:
 ```
-[GET] {baseUrl}/elastic/info
-[GET] {baseUrl}/elastic/health
+[GET] http://localhost:5000/elastic/info
+[GET] http://localhost:5000/elastic/health
 ```
 - Add or update a doc:
 ```
-[POST] {baseUrl}/elastic/<user_id>
+[POST] http://localhost:5000/elastic/<user_id>
 body:
 {
     "username": "test",
@@ -36,10 +36,10 @@ body:
 ```
 - Delete a doc:
 ```
-[DELETE] {baseUrl}/elastic/<user_id>
+[DELETE] http://localhost:5000/elastic/<user_id>
 ```
 
 - Search a keyword in user address field:
 ```
-[GET] {baseUrl}/elastic/<Keyword>
+[GET] http://localhost:5000/elastic/<Keyword>
 ```

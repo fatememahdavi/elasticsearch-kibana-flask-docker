@@ -24,7 +24,6 @@ def add_update_doc(user_id):
             "email": args["email"],
             "date": datetime.now(),
         }
-        # for more information: https://elasticsearch-py.readthedocs.io/en/v8.5.3/
         res = es.index(
             index="test-index", doc_type="test-type", id=user_id, document=doc
         )
@@ -41,7 +40,6 @@ def add_update_doc(user_id):
 @app.route("/elastic/<user_id>", methods=["DELETE"])
 def delete_doc(user_id):
     try:
-        # for more information: https://elasticsearch-py.readthedocs.io/en/v8.5.3/
         res = es.delete(index="test-index", doc_type="test-type", id=user_id)
         es.indices.refresh(index="test-index")
         return (
@@ -56,7 +54,6 @@ def delete_doc(user_id):
 @app.route("/elastic/<keyword>", methods=["GET"])
 def search_in_address(keyword):
     try:
-        # for more information: https://elasticsearch-py.readthedocs.io/en/v8.5.3/
         data = es.search(
             index="test-index",
             query={"match": {"address": {"query": "arg", "fuzziness": 2}}},
